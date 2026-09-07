@@ -1,0 +1,39 @@
+{
+  "n_total": 5000,
+  "n_tune": 400,
+  "n_test": 400,
+  "best_contamination": 0.05,
+  "best_threshold": 40.0,
+  "met_precision_bar_on_tune": false,
+  "ensemble": {
+    "precision": 0.5,
+    "recall": 0.205,
+    "f1": 0.29,
+    "roc_auc": 0.915,
+    "confusion_matrix": [
+      [
+        347,
+        9
+      ],
+      [
+        35,
+        9
+      ]
+    ]
+  },
+  "supervised_baseline_rf": {
+    "precision": 1.0,
+    "recall": 0.977,
+    "f1": 0.989,
+    "roc_auc": 1.0
+  },
+  "production_model": "supervised_rf_plus_anomaly_flag",
+  "production_decision_threshold": 50,
+  "novel_pattern_flags_raised": 3,
+  "vetting_action_counts": {
+    "APPROVE - Low fraud risk": 4380,
+    "REJECT - High fraud risk": 555,
+    "MANUAL REVIEW - Audit history": 42,
+    "CAUTION - Monitor 2-4 weeks": 23
+  }
+}

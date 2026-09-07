@@ -1,0 +1,14 @@
+{
+  "n_profiles_scored": 5000,
+  "has_ground_truth_labels": false,
+  "primary_signal": "unsupervised anomaly percentile (fit directly on this population, no labels required)",
+  "secondary_signal": "supervised transfer probability from synthetic-reference-trained RF (UNVALIDATED on this population)",
+  "vetting_action_counts": {
+    "APPROVE - Not a statistical outlier": 4251,
+    "CAUTION - Top 15% anomaly, monitor 2-4 weeks": 499,
+    "MANUAL REVIEW - Top 5% anomaly": 199,
+    "REJECT - Top 1% anomaly, escalate for manual audit": 51
+  },
+  "signals_disagree_count": 53,
+  "recommendation": "No verified fraud outcomes exist for this population. Before any automated rejection is driven by this file, manually audit a sample of ~150-300 profiles (oversampling the REJECT/MANUAL REVIEW buckets) to build a real labeled set, then re-run fraud_detection.py directly on that labeled file to get a genuinely validated precision/recall for THIS population."
+}
